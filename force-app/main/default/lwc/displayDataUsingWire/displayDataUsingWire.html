@@ -1,0 +1,14 @@
+<!--
+  @description       : 
+  @author            : Adnan Zahry
+  @group             : 
+  @last modified on  : 12-20-2021
+  @last modified by  : Adnan Zahry
+-->
+<template>
+    <lightning-card title="Data Display using Wire">
+        <template for:each={data} for:item="account">
+            <p key={account.Id}>{account.Name}</p>
+        </template>
+    </lightning-card>
+</template>

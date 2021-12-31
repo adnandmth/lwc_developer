@@ -1,0 +1,18 @@
+<!--
+  @description       : Render UI 
+  * override standard new opportunity button
+  * new action -> new opportunity via Account object
+  @author            : Adnan Zahry
+  @group             : Secondmuse Salesforce Group
+  @last modified on  : 12-20-2021
+  @last modified by  : Adnan Zahry
+-->
+<template>
+    <lightning-card title="Hello">
+      <p class="slds-p-horizontal_small">{welcomeMessage}</p>
+  </lightning-card>
+  <p></p>
+  Hi <div>{greetings} <c-api-decorator result={result}></c-api-decorator></div>
+
+  <lightning-input value={greetings} name="greetings" label="Enter Greetings" onchange={handleGreetingChanges}></lightning-input>
+</template>

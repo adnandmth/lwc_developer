@@ -1,0 +1,47 @@
+<!--
+  @description       : 
+  @author            : Adnan Zahry
+  @group             : 
+  @last modified on  : 12-24-2021
+  @last modified by  : Adnan Zahry
+-->
+<aura:component controller="CalculatorController">
+    <aura:attribute name="fnumber" type="decimal"/>
+    <aura:attribute name="snumber" type="decimal"/>
+    <aura:attribute name="result" type="decimal"/>
+    <br/>
+    <div class="div">
+        <b>Calculator Example</b>
+    </div>
+    <div class="div">
+        <div>
+            <ui:inputNumber label="first number using Aura Id: " aura:id="fnum"/>
+        </div><br/>
+        <div>
+            <ui:inputNumber label="second number using Aura Id: " aura:id="snum"/>
+        </div><br/>
+        <div>
+            <ui:inputNumber label="Result using Aura Id: " aura:id="result"/>
+        </div><br/>
+       <!-- invoke the method must use the name space before the method name -->
+        <div>
+            <ui:button label="Click me" press="{!c.calculate}" class="button"/>
+        </div>
+    </div>
+
+    <div class="div">
+        <div>
+            <ui:inputNumber label="first number using Attribute: " value="{!v.fnumber}"/>
+        </div><br/>
+        <div>
+            <ui:inputNumber label="second number using Attribute: " value="{!v.snumber}"/>
+        </div><br/>
+        <div>
+            <ui:inputNumber label="Result using Attribute: " value="{!v.result}"/>
+        </div><br/>
+       <!-- invoke the method must use the name space before the method name -->
+        <div>
+            <ui:button label="Click me" press="{!c.calculate}" class="button"/>
+        </div>
+    </div>
+</aura:component>	

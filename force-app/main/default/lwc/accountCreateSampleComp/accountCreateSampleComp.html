@@ -1,0 +1,17 @@
+<!--
+  @description       : 
+  @author            : Adnan Zahry
+  @group             : 
+  @last modified on  : 12-23-2021
+  @last modified by  : Adnan Zahry
+-->
+<template>
+    <lightning-card title="Account Creation">
+        <p class="slds-p-horizontal_small">
+            <lightning-record-form object-api-name={objectApiName} fields={fieldList} onsuccess={handleAccountCreation}>
+            </lightning-record-form>
+        </p>
+        
+    </lightning-card>
+   
+</template>

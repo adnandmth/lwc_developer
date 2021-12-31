@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : Adnan Zahry
+  @group             : 
+  @last modified on  : 12-27-2021
+  @last modified by  : Adnan Zahry
+-->
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:contact" size="small"></lightning-icon>
+            Mass Delete Records
+        </h3>
+        <div slot="footer">
+                <lightning-button label="Delete Selected Records" variant="brand" onclick={deleteSelRecords}></lightning-button>
+                <div>
+                    {message}
+                </div>
+        </div>
+        <p class="slds-p-horizontal_small">
+            <lightning-datatable data={contacts.data} columns={columns} key-field="index" onrowselection={prepareSelectedRows}>
+
+            </lightning-datatable>
+        </p>
+    </lightning-card>
+</template>

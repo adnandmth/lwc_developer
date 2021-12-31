@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Adnan Zahry
+  @group             : 
+  @last modified on  : 12-31-2021
+  @last modified by  : Adnan Zahry
+-->
+<template>
+    <lightning-card  title="Account List LWC">
+       <!--<h3 slot="title">
+               <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+                   Custom Lightning Card Title
+           </h3>-->
+       <p class="slds-p-horizontal_small">
+           <template for:each={accountList} for:item="account">
+            <div key={account.Id}>
+                <a href="#" data-value={account.Id} onclick={handleClick}>{account.Name}</a>
+            </div>
+           </template>
+        </p>
+       <p slot="footer">Lightning Card Footer</p>
+    </lightning-card>
+</template>
